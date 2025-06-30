@@ -8,30 +8,32 @@ This project focuses on recognizing American Sign Language (ASL) hand gestures f
 - A Random Forest classifier is trained on the extracted landmarks.
 - A basic HTML interface is included to display prediction results.
 
-## Folder Structure
-asl-gesture-detection-mediapipe/
-├── data/
-│ └── asl_alphabet_train/ # Folder of training images per class (A-Z)
-├── mediapipe_landmark_extractor.py # Extracts hand landmarks into a CSV file
-├── rf_model.ipynb # Jupyter notebook to train Random Forest
-├── app/
-│ ├── index.html # Frontend to display predictions
-│ └── hand.csv # Prediction input
-├── model.pkl # Trained model (optional - not pushed)
-└── README.md
+## Project Structure
 
+- `app.py` — Main Flask app for running the web server
+- `index.html` — Frontend UI for prediction
+- `requirements.txt` — Python package dependencies
+- `start.sh` — Shell script to start the app
+- `data/` — Folder to store collected data
+- `data.pickle`, `scaler.pkl`, `label_encoder.pkl` — Saved preprocessed objects
+- `Model_training.py` — Trains the ML model
+- `Model_testing.py` — Evaluates the model
+- `random_forest_model.pkl` — Final trained model
+- `Landmark_Creation.py`, `Data_collection.py` — Scripts to extract hand landmarks using MediaPipe
+- `.venv/` — Virtual environment
+  
 ## How to Run
 
-1. Install the required Python packages:
-2. Run the landmark extraction script:
-3. Train the classifier:
-4. To test your model, you can open the HTML file:
+1. Install the required Python packages
+2. Run the landmark extraction script
+3. Train the classifier
+4. To test your model, you can open the HTML file
 
 ## Key Technologies Used
 
 - MediaPipe for extracting hand landmarks from images
 - Random Forest from scikit-learn for classification
-- HTML and optional JavaScript for the user interface
+- HTML for the user interface
 
 ## Author
 
